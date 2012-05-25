@@ -54,7 +54,10 @@
         var script = document.createElement('script');
 		script.type = 'text/javascript';
 		script.src = selectors[selector.templateName][selector.typeName];
-		document.getElementById('selectors-placeholder').appendChild(script);
+        var div = document.createElement('div');
+        div.id = 'ccs-selector-wrapper';
+        document.getElementById('selectors-placeholder').appendChild(script);
+        document.getElementById('selectors-placeholder').appendChild(div);
         console.log('added');
     };
 }());
