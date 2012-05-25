@@ -33,12 +33,12 @@
     
     var rshForm = document.createElement('form');
     rshForm.id = 'rshStorageForm';
-    rshForm.style = 'left:-1000px;top:-1000px;width:1px;height:1px;border:0;position:absolute;';
+    rshForm.style.cssText = 'left:-1000px;top:-1000px;width:1px;height:1px;border:0;position:absolute;';
     placeholder.appendChild(rshForm);
     
     var rshTextarea = document.createElement('textarea');
     rshTextarea.id = 'rshStorageField';
-    rshTextarea.style = 'left:-1000px;top:-1000px;width:1px;height:1px;border:0;position:absolute;';
+    rshTextarea.style.cssText = 'left:-1000px;top:-1000px;width:1px;height:1px;border:0;position:absolute;';
     rshForm.appendChild(rshTextarea);
     
     var ajax = document.createElement('script');
