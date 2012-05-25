@@ -237,7 +237,7 @@ TABLE.costandard THEAD TR TD,TABLE.costandard TBODY TR TT{font-size:11px !import
 TABLE.costandard TD{border-bottom:#EEE solid 1px !important}
 INPUT.button{background-color:#2A5CA5 !important;color:#FFF;cursor:pointer}
 .framedecor{background:none}
-#footer{background:url(clear.gif) no-repeat center top;padding:5px 20px 15px;display:block;clear:both;margin:0;color:#999;text-align:center}
+#footer{padding:5px 20px 15px;display:block;clear:both;margin:0;color:#999;text-align:center}
 #footer P{padding-top:3px;padding-bottom:3px;color:#333}
 .bxlegend{border-bottom:1px solid #CED5DB !important;border-top:1px solid #CED5DB !important;border-left:0 none #FFF;margin-left:205px;background:#EEE;width:775px}
 .bottomlogo{padding:0 10px;text-align:right}
