@@ -46,18 +46,22 @@
     };
     console.log(selector);
     
-    var oldOnload = window.onload || function() { };
-    window.onload = function() {
-        oldOnload();
-        //document.getElementById('selectors-placeholder').innerHTML = '<script type="text/javascript" src="' + selectors[selector.templateName][selector.typeName] + '"></script>';
-        console.log('adding');
-        var script = document.createElement('script');
-		script.type = 'text/javascript';
-		script.src = selectors[selector.templateName][selector.typeName];
-        var div = document.createElement('div');
-        div.id = 'ccs-selector-wrapper';
-        document.getElementById('selectors-placeholder').appendChild(script);
-        document.getElementById('selectors-placeholder').appendChild(div);
-        console.log('added');
+    var init = function init() {
+        var placeholder = document.getElementById('selectors-placeholder');
+        if(!placeholder) {
+            setTimeout(init, 100);
+        } else {
+            console.log('adding');
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = selectors[selector.templateName][selector.typeName];
+            var div = document.createElement('div');
+            div.id = 'ccs-selector-wrapper';
+            placeholder.appendChild(script);
+            placeholder.appendChild(div);
+            console.log('added');
+        }
     };
+    init();
+    
 }());
