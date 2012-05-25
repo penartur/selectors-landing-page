@@ -16,9 +16,9 @@
             memory: 'http://selectors.cnetcontentsolutions.com/memory/demo-3/hook.ws'
         },
         legacy: {
-            battery: 'http://selectors.cnetcontentsolutions.com/battery/demo-1/hook.ws',
-            inktoner: 'http://selectors.cnetcontentsolutions.com/inktoner/demo-1/hook.ws',
-            memory: 'http://selectors.cnetcontentsolutions.com/memory/demo-1/hook.ws'
+            battery: 'legacyhook.js',
+            inktoner: 'legacyhook.js',
+            memory: 'legacyhook.js'
         },
         classic: {
             battery: 'http://selectors.cnetcontentsolutions.com/battery/demo-4/hook.ws',
