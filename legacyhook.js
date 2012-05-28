@@ -1,18 +1,15 @@
 (function() {
     "use strict";
     /*jshint multistr: true */
-    /*global window: false */
-    
-    var urls = {
-        battery: 'http://selectors.cnetcontentsolutions.com/battery/demo-1/',
-        inktoner: 'http://selectors.cnetcontentsolutions.com/inktoner/demo-1/',
-        memory: 'http://selectors.cnetcontentsolutions.com/memory/demo-1/'
-    };
+    /*global window: false, selectorsSwitcherConfig: false */
     
     var query = decodeURIComponent(window.location.search).substr(1);
     var queryParts = query.split('/');
-    var selectorTypeName = queryParts[1];
-    var url = urls[selectorTypeName];
+    var selector = {
+        templateName: queryParts[0],
+        typeName: queryParts[1]
+    };
+    var url = selectorsSwitcherConfig.legacySelectors[selector.templateName][selector.typeName];
     
     window.this_url = url + 'q.asp';
     window.dtext = new Array ("Select your Device Type","Select the Manufacturer","Select the Product Line","Select the Model");
@@ -65,7 +62,7 @@
     selProduct.id = 'IEbug';
     selProduct.className = 'sel_product';
     selProduct.innerHTML = '\
-<div class="sel_banner_' + selectorTypeName + '"><!-- Banner Space --></div>\
+<div class="sel_banner_' + selector.typeName + '"><!-- Banner Space --></div>\
 <div class="sel_search">\
     <table width=90% border=0 cellspacing=0 cellpadding=3>\
         <tr>\
