@@ -1,64 +1,74 @@
-(function() {
+(function () {
     "use strict";
     /*jshint multistr: true */
-    /*global window: false, selectorsSwitcherConfig: false */
-    
-    var query = decodeURIComponent(window.location.search).substr(1);
-    var queryParts = query.split('/');
-    var selector = {
-        templateName: queryParts[0],
-        typeName: queryParts[1]
-    };
-    var url = selectorsSwitcherConfig.legacySelectors[selector.templateName][selector.typeName];
-    
-    window.this_url = url + 'q.asp';
-    window.dtext = new Array ("Select your Device Type","Select the Manufacturer","Select the Product Line","Select the Model");
-    window.mscm=0;
+    /*jslint es5: true */
+    /*global window: false, document: false, selectorsSwitcherConfig: false */
 
-    var placeholder = document.getElementById('selectors-placeholder');
+    var placeholder,
+        json2007,
+        rsh,
+        rshForm,
+        rshTextarea,
+        ajax,
+        runAjax,
+        css,
+        selProduct,
+        query = decodeURIComponent(window.location.search).substr(1),
+        queryParts = query.split('/'),
+        selector = {
+            templateName: queryParts[0],
+            typeName: queryParts[1]
+        },
+        url = selectorsSwitcherConfig.legacySelectors[selector.templateName][selector.typeName];
+
+    window.this_url = url + 'q.asp';
+    window.dtext = ["Select your Device Type", "Select the Manufacturer", "Select the Product Line", "Select the Model"];
+    window.mscm = 0;
+
+    placeholder = document.getElementById('selectors-placeholder');
     placeholder.className = 'IEbug';
-    
-    var json2007 = document.createElement('script');
+
+    json2007 = document.createElement('script');
     json2007.type = 'text/javascript';
     json2007.src = 'http://selectors.cnetcontentsolutions.com/common/shared/json2007.js';
     placeholder.appendChild(json2007);
-    
-    var rsh = document.createElement('script');
+
+    rsh = document.createElement('script');
     rsh.type = 'text/javascript';
     rsh.src = 'http://selectors.cnetcontentsolutions.com/common/shared/rsh.js';
     placeholder.appendChild(rsh);
-    
-    var rshForm = document.createElement('form');
+
+    rshForm = document.createElement('form');
     rshForm.id = 'rshStorageForm';
     rshForm.style.cssText = 'left:-1000px;top:-1000px;width:1px;height:1px;border:0;position:absolute;';
     placeholder.appendChild(rshForm);
-    
-    var rshTextarea = document.createElement('textarea');
+
+    rshTextarea = document.createElement('textarea');
     rshTextarea.id = 'rshStorageField';
     rshTextarea.style.cssText = 'left:-1000px;top:-1000px;width:1px;height:1px;border:0;position:absolute;';
     rshForm.appendChild(rshTextarea);
-    
-    var ajax = document.createElement('script');
+
+    ajax = document.createElement('script');
     ajax.type = 'text/javascript';
     ajax.src = url + 'ajax.js';
     placeholder.appendChild(ajax);
-    
-    var runAjax = function runAjax() {
-        if(!window.dosubmit) {
-            setTimeout(runAjax, 100);
+
+    runAjax = function runAjax() {
+        if (!window.dosubmit) {
+            window.setTimeout(runAjax, 100);
         } else {
             window.onload();
         }
     };
     runAjax();
-    
-    var css = document.createElement('link');
+
+    css = document.createElement('link');
     css.rel = 'stylesheet';
     css.type = 'text/css';
     css.href = url + 'selector.css?=v2';
     placeholder.appendChild(css);
-    
-    var selProduct = document.createElement('div');
+
+    selProduct = document.createElement('div');
     selProduct.id = 'IEbug';
     selProduct.className = 'sel_product';
     selProduct.innerHTML = '\
@@ -141,5 +151,5 @@
 ';
 
     placeholder.appendChild(selProduct);
-    
+
 }());

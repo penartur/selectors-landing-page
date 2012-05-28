@@ -1,7 +1,7 @@
-(function() {
+(function () {
     "use strict";
     /*global window: false */
-    
+
     window.selectorsSwitcherConfig = {
         selectors: {
             stepped: {
@@ -26,7 +26,7 @@
                 memory: 'http://selectors.cnetcontentsolutions.com/memory/demo-4/hook.ws'
             }
         },
-        
+
         legacySelectors: {
             legacy: {
                 battery: 'http://selectors.cnetcontentsolutions.com/battery/demo-1/',
@@ -34,19 +34,19 @@
                 memory: 'http://selectors.cnetcontentsolutions.com/memory/demo-1/'
             }
         },
-        
+
         defaultSelector: {
             templateName: 'stepped',
             typeName: 'memory'
         },
-        
+
         uiTemplates: [
             { uiName: 'Stepped layout', name: 'stepped' },
             { uiName: 'Accordion layout', name: 'accordion' },
             { uiName: 'Classic layout', name: 'legacy' },
             { uiName: 'Classic layout 2', name: 'classic' }
         ],
-        
+
         uiTypes: [
             { uiName: 'Memory', name: 'memory' },
             { uiName: 'Ink and Toner', name: 'inktoner' },
