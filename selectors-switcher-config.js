@@ -38,6 +38,19 @@
         defaultSelector: {
             templateName: 'stepped',
             typeName: 'memory'
-        }
+        },
+        
+        uiTemplates: [
+            { uiName: 'Stepped layout', name: 'stepped' },
+            { uiName: 'Accordion layout', name: 'accordion' },
+            { uiName: 'Classic layout', name: 'legacy' },
+            { uiName: 'Classic layout 2', name: 'classic' }
+        ],
+        
+        uiTypes: [
+            { uiName: 'Memory', name: 'memory' },
+            { uiName: 'Ink and Toner', name: 'inktoner' },
+            { uiName: 'Battery and Power', name: 'battery' }
+        ]
     };
 }());
