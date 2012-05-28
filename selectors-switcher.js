@@ -18,7 +18,7 @@
     var initSelector = function initSelector() {
         var placeholder = document.getElementById('selectors-placeholder');
         if(!placeholder) {
-            window.setTimeout(initSelector, 100);
+            window.setTimeout(initSelector, 30);
         } else {
             var script = document.createElement('script');
             script.type = 'text/javascript';
@@ -41,7 +41,7 @@
             typeA,
             placeholder = document.getElementById('extlinkLeft');
         if(!placeholder) {
-            window.setTimeout(initLeftsideMenu, 100);
+            window.setTimeout(initLeftsideMenu, 30);
         } else {
             for (i = 0; i < selectorsSwitcherConfig.uiTemplates.length; i++) {
                 templateHeadDiv = document.createElement('div');
