@@ -8,7 +8,6 @@
                 battery: 'http://selectors.cnetcontentsolutions.com/battery/demo/hook.ws',
                 inktoner: 'http://selectors.cnetcontentsolutions.com/inktoner/demo/hook.ws',
                 memory: 'http://selectors.cnetcontentsolutions.com/memory/demo/hook.ws'
-                //memory: 'test.js'
             },
             accordion: {
                 battery: 'http://selectors.cnetcontentsolutions.com/battery/demo-3/hook.ws',

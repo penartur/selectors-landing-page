@@ -8,6 +8,8 @@
         initSelector,
         initLeftsideMenu;
 
+    document.write = function() { }; //to prevent subsequent document.write in hook.ws
+
     query = decodeURIComponent(window.location.search).substr(1);
     if (!query || query.indexOf('/') < 0) {
         window.location.search = selectorsSwitcherConfig.defaultSelector.templateName + '/' + selectorsSwitcherConfig.defaultSelector.typeName;
