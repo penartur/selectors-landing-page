@@ -118,8 +118,8 @@ P{margin:0;padding:0 0 5px}
 TABLE,TD,TR,IMG{border:0 none #FFF !important;border-collapse:collapse !important;border-spacing:0 !important}
 HR{height:1px;background:#FFF !important;padding:0;border-top:1px dotted #CED5DB !important;border-right:0 none #FFF !important;border-bottom:0 none #FFF !important;border-left:0 none #FFF !important}
 B,STRONG{color:#111}
-A,A B,A SPAN{color:#0D7AD9 !important}
-A:HOVER,A:HOVER B,A:HOVER SPAN{color:#F99333 !important}
+#copage .decorleft A, #copage .decorleft A B, #copage .decorleft A SPAN{color:#0D7AD9}
+#copage .decorleft A:HOVER, #copage .decorleft A:HOVER B, #copage .decorleft A:HOVER SPAN{color:#F99333}
 .red,EM,EM A,EM A:HOVER{color:#C33 !important}
 TH{background-color:#EEE}
 .topbar{padding:3px 5px 0;background:#03304A;overflow:hidden;line-height:15px;color:#FFF !important;}
@@ -243,7 +243,7 @@ INPUT.button{background-color:#2A5CA5 !important;color:#FFF;cursor:pointer}
 .bottomlogo{padding:0 10px;text-align:right}
 .costandard TH,.costandard TH A,TD.header,TFOOT .BodyActionText,TFOOT .BodyActionText A{color:#333 !important}
 .costandard TH A:HOVER,TFOOT .BodyActionText A:HOVER{text-decoration:none !important;color:#333}
-    
+
 UL.navdecor{background:url(https://usm.channelonline.com/images/resellers/contentsolutions/image20100730231928.gif) no-repeat right top !important;padding:36px 0 5px !important;width:210px !important;border:none !important;margin:0 !important;clear:left;float:left}
 UL.navdecor LI{width:189px;padding:0;display:block;border:none;background:#F0F4F7;border-right:1px solid #CED5DB;border-left:1px solid #CED5DB;border-top:1px solid #CED5DB;margin:-1px 0 0 10px !important;}
 UL.navdecor LI A{border-bottom:1px solid #CED5DB}
