@@ -42,8 +42,8 @@
         uiTemplates: [
             { uiName: 'Stepped layout', name: 'stepped' },
             { uiName: 'Accordion layout', name: 'accordion' },
-            { uiName: 'Classic layout', name: 'legacy' },
-            { uiName: 'Classic layout 2', name: 'classic' }
+            { uiName: 'Classic layout', name: 'classic' },
+            { uiName: 'Classic layout (legacy)', name: 'legacy' }
         ],
 
         uiTypes: [
