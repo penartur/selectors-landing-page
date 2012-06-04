@@ -6,7 +6,10 @@
         queryParts,
         selector,
         initSelector,
-        initLeftsideMenu;
+        initLeftsideMenu,
+        setInnerText = function (elem, text) {
+            elem.textContent = elem.innerText = text;
+        };
 
     document.write = function() { }; //to prevent subsequent document.write in hook.ws
 
@@ -56,7 +59,7 @@
             for (i = 0; i < selectorsSwitcherConfig.uiTemplates.length; i++) {
                 templateHeadDiv = document.createElement('div');
                 templateHeadDiv.className = 'head';
-                templateHeadDiv.innerText = selectorsSwitcherConfig.uiTemplates[i].uiName;
+                setInnerText(templateHeadDiv, selectorsSwitcherConfig.uiTemplates[i].uiName);
                 placeholder.appendChild(templateHeadDiv);
 
                 templateBodyDiv = document.createElement('div');
@@ -72,7 +75,7 @@
 
                     typeA = document.createElement('a');
                     typeA.title = selectorsSwitcherConfig.uiTypes[j].uiName;
-                    typeA.innerText = selectorsSwitcherConfig.uiTypes[j].uiName;
+                    setInnerText(typeA, selectorsSwitcherConfig.uiTypes[j].uiName);
                     typeA.href = '?' + selectorsSwitcherConfig.uiTemplates[i].name + '/' + selectorsSwitcherConfig.uiTypes[j].name;
                     typeLi.appendChild(typeA);
                 }
@@ -80,7 +83,7 @@
 
             templateHeadDiv = document.createElement('div');
             templateHeadDiv.className = 'head';
-            templateHeadDiv.innerText = 'Product finders';
+            setInnerText(templateHeadDiv, 'Product finders');
             placeholder.appendChild(templateHeadDiv);
 
             templateBodyDiv = document.createElement('div');
@@ -95,7 +98,7 @@
 
             typeA = document.createElement('a');
             typeA.title = 'Product finders demo';
-            typeA.innerText = 'Product finders demo';
+            setInnerText(typeA, 'Product finders demo');
             typeA.href = 'http://selectors.cnetcontentsolutions.com/finders/';
             typeLi.appendChild(typeA);
         }
