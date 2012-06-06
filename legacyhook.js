@@ -72,7 +72,7 @@
     selProduct.id = 'IEbug';
     selProduct.className = 'sel_product';
     selProduct.innerHTML = '\
-<div class="sel_banner_' + selector.typeName + '"><!-- Banner Space --></div>\
+<div class="sel_banner_' + (selector.typeName != 'inktoner' ? selector.typeName : 'inkandtoner') + '"><!-- Banner Space --></div>\
 <div class="sel_search">\
     <table width=90% border=0 cellspacing=0 cellpadding=3>\
         <tr>\
