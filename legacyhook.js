@@ -22,6 +22,7 @@
         url = selectorsSwitcherConfig.legacySelectors[selector.templateName][selector.typeName];
 
     window.this_url = url + 'q.asp';
+    window.selectors_base_url = url;
     window.dtext = ["Select your Device Type", "Select the Manufacturer", "Select the Product Line", "Select the Model"];
     window.mscm = 0;
 
